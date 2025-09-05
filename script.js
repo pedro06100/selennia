@@ -43,7 +43,7 @@ const collectionData = [
     price: "1 000 €",
     details: "Origine : Haïti<br>Dimensions : 43 × 34 cm (hors cadre)",
     category: "art-vaudou",
-    image: "image_objet/IMG_2173.jpg",
+    image: "./image_objet/IMG_2173.jpg",
     featured: true
   },
   {
