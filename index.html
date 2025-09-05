@@ -1,258 +1,216 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Selennia Boutique - Objets d'Art Anciens</title>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
-  <!-- Police médiévale -->
-<link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
-  <!-- Header -->
-  <header class="header">
-    <div class="header-container">
-      <div class="logo-section">
-        <a class="logo-right" href="#accueil" aria-label="Accueil Selennia">
-          <img src="./logo/selennia_logo_4.png" alt="Selennia" class="logo-right-img">
-          <div class="brand-text">SELENNIA BOUTIQUE</div>
-        </a>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="logo-container">
+        <div class="logo-wrapper">
+          <!-- Votre logo en image -->
+          <img src="image_objet/selennia_logo_4.png" alt="Selennia Logo" class="logo-img">
+        </div>
+        <div class="brand-text">
+          <div class="brand-name">SELENNIA</div>
+          <div class="brand-subtitle">BOUTIQUE</div>
+        </div>
       </div>
-      <nav class="nav">
-        <a href="#accueil" class="nav-link">Accueil</a>
-        <a href="#catalogue" class="nav-link">Catalogue</a>
-        <a href="#contact" class="nav-link">Contact</a>
-      </nav>
+      
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#accueil" class="nav-link">Accueil</a></li>
+        <li><a href="#galerie" class="nav-link">Galerie</a></li>
+        <li><a href="#apropos" class="nav-link">À Propos</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
-  </header>
-
-  
-
+  </nav>
 
   <!-- Hero Section -->
   <section id="accueil" class="hero">
-    <div class="hero-content fade-in-up">
-      <h1 class="hero-title">Objets Anciens Rares<br>& de Grande Valeur</h1>
-      <p class="hero-subtitle">Découvrez des pièces uniques, authentiques et intemporelles, sélectionnées avec soin pour
-        leur histoire exceptionnelle et leur élégance raffinée.</p>
-      <a href="#catalogue" class="cta-button">
-        Découvrir la Collection
-        <span>→</span>
-      </a>
-    </div>
-  </section>
-
-  <!-- Featured Carousel -->
-  <section class="featured-section">
-    <div class="scroll-reveal">
-      <h2 class="section-title">Pièces d'Exception</h2>
-      <p class="section-subtitle">Une sélection de nos plus belles acquisitions</p>
-    </div>
-
-    <div class="carousel-container scroll-reveal">
-      <div class="carousel-track">
-        <div class="carousel-slide">
-          <div class="slide-image">
-            <img src="./image_objet/IMG_cheval.jpg" alt="Cheval chinois bois et os">
-          </div>
-          <div class="slide-content">
-            <h3 class="slide-title">Cheval Chinois en Bois et Os</h3>
-            <p class="slide-description">Magnifique sculpture traditionnelle chinoise du XXème siècle, alliant le
-              savoir-faire ancestral du travail du bois et de l'os. Une pièce d'une élégance remarquable qui témoigne de
-              l'art équestre chinois.</p>
-            <div class="slide-price">650 €</div>
-            <p><strong>Origine :</strong> Chine, XXème siècle<br>
-              <strong>Dimensions :</strong> H 65cm × L 56cm
-            </p>
-          </div>
-        </div>
-
-        <div class="carousel-slide">
-          <div class="slide-image">
-            <img src="./image_objet/IMG_busteafricain.jpg" alt="Buste Africain en bois">
-          </div>
-          <div class="slide-content">
-            <h3 class="slide-title">Buste Africain en Bois Sculpté</h3>
-            <p class="slide-description">Sculpture traditionnelle du Bénin ornée de coquillages et de bronze,
-              représentant l'art tribal dans toute sa splendeur. Une œuvre authentique qui capture l'essence de
-              l'artisanat africain.</p>
-            <div class="slide-price">720 €</div>
-            <p><strong>Origine :</strong> Bénin, XXème siècle<br>
-              <strong>Dimensions :</strong> H 60cm × L 27cm
-            </p>
-          </div>
-        </div>
-
-        <div class="carousel-slide">
-          <div class="slide-image">
-            <img src="./image_objet/IMG_miroirsoleil.JPG" alt="Miroir soleil oeil de sorcière">
-          </div>
-          <div class="slide-content">
-            <h3 class="slide-title">Miroir Soleil Œil de Sorcière</h3>
-            <p class="slide-description">Exceptionnel miroir convexe en bois doré du XXème siècle, au design solaire
-              raffiné. Ce type de miroir, aussi appelé "œil de sorcière", était très prisé dans les intérieurs
-              bourgeois.</p>
-            <div class="slide-price">450 €</div>
-            <p><strong>Époque :</strong> XXème siècle<br>
-              <strong>Diamètre :</strong> 61 cm
-            </p>
-          </div>
-        </div>
+    <div class="hero-content">
+      <div class="hero-logo">
+        <!-- Logo principal agrandi -->
+        <img src="image_objet/selennia_logo_4.png" alt="Selennia Logo" class="hero-logo-img">
       </div>
-
-      <div class="carousel-buttons">
-        <button class="carousel-btn prev-btn">‹</button>
-        <button class="carousel-btn next-btn">›</button>
+      
+      <h1 class="hero-title">Objets d'Art Anciens<br>& de Collection</h1>
+      <p class="hero-subtitle">Découvrez des pièces uniques, authentiques et intemporelles, sélectionnées avec passion pour leur histoire exceptionnelle et leur beauté remarquable.</p>
+      
+      <div class="cta-group">
+        <a href="#galerie" class="btn-primary">
+          Découvrir la Collection
+          <i class="fas fa-arrow-right"></i>
+        </a>
+        <a href="#apropos" class="btn-secondary">
+          Notre Histoire
+          <i class="fas fa-info-circle"></i>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- Catalogue -->
-  <section id="catalogue" class="catalogue-section">
-    <div class="scroll-reveal">
-      <h2 class="section-title">Notre Catalogue</h2>
-      <p class="section-subtitle">Explorez notre collection complète d'objets d'art et d'antiquités</p>
+  <!-- Galerie -->
+  <section id="galerie" class="section gallery">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 class="section-title">Notre Collection</h2>
+        <p class="section-subtitle">Explorez notre sélection d'objets d'art et d'antiquités soigneusement choisis</p>
+      </div>
+
+      <div class="gallery-grid" id="gallery-grid">
+        <!-- Les items seront ajoutés dynamiquement par JavaScript -->
+      </div>
     </div>
+  </section>
 
-    <div class="catalogue-grid">
-      <article class="catalogue-item scroll-reveal">
-        <img src="./image_objet/IMG_1917.jpg" alt="Amandier en fleurs de Van Gogh" class="lightbox-trigger">
-        <div class="item-content">
-          <h3 class="item-title">“Amandier en fleurs”, d’après Vincent van Gogh</h3>
-          <p class="item-description">Huile sur toile — 93 × 75 cm (reproduction peinte à la main)
+  <!-- À Propos -->
+  <section id="apropos" class="section about">
+    <div class="container">
+      <div class="about-content">
+        <div class="about-text fade-in">
+          <h3>Notre Passion pour l'Art Ancien</h3>
+          <p>Selennia Boutique est née d’une passion profonde pour les objets d’art anciens et les antiquités. Chaque pièce est sélectionnée pour son authenticité, sa beauté et l’histoire qu’elle porte.</p>
+          
+          <p>Nous nous spécialisons dans la recherche d’objets rares du monde entier : sculptures africaines, mobilier d’époque, œuvres asiatiques et pièces décoratives singulières.</p>
 
-Reproduction soignée du célèbre motif aux branches d’amandier sur ciel azur. La matière picturale est travaillée en huile avec un joli relief (empâtements) qui restitue l’effet vivant des fleurs et le graphisme des rameaux. Les couleurs sont fraîches et lumineuses, idéales pour apporter une touche impressionniste à un intérieur.</p>
-          <div class="item-price">600 €</div>
+          <p>Basés à Nice, France, nous recevons sur rendez-vous et proposons une expédition sécurisée en France et à l’international : emballage sur-mesure, assurance et suivi.</p>
         </div>
-      </article>
-
-      <article class="catalogue-item scroll-reveal">
-        <img src="./image_objet/IMG_1913.jpg" alt="Champs de blé avec cyprès" class="lightbox-trigger">
-        <div class="item-content">
-          <h3 class="item-title">“Champs de blé avec cyprès”, d’après Vincent van Gogh</h3>
-          <p class="item-description">Huile sur toile — 96 × 75 cm (reproduction peinte à la main)
-
-Reproduction soignée de l’un des paysages provençaux les plus emblématiques de Van Gogh. La pâte picturale généreuse restitue le mouvement des nuées et des herbes ondoyantes, tandis que les cyprès sombres structurent la composition. Couleurs vibrantes et matière vivante pour un tableau décoratif de grand format.
-          </p>
-          <div class="item-price">800 €</div>
+        
+        <div class="about-image fade-in">
+          <div class="about-logo-container">
+            <img src="image_objet/selennia_logo_4.png" alt="Selennia Logo" class="about-logo-img">
+            <div class="about-logo-text">
+              <p>Expertise & Authenticité</p>
+            </div>
+          </div>
         </div>
-      </article>
-
-      <article class="catalogue-item scroll-reveal">
-        <img src="./image_objet/IMG_1916.jpg" alt="Fauteuil Voltaire" class="lightbox-trigger">
-        <div class="item-content">
-          <h3 class="item-title">Fauteuil « Voltaire » – entièrement restauré</h3>
-          <p class="item-description">Fauteuil « Voltaire » – entièrement restauré
-
-Velours jaune • clous tapissier • bois sculpté
-
-Élégant fauteuil Voltaire au dossier haut et courbes généreuses, restauré dans les règles de l’art. Le châssis en bois a été révisé, la garniture et le revêtement ont été refaits à neuf en velours jaune lumineux, souligné par un fin galuchat de clous tapissier. Les accoudoirs sculptés et les pieds galbés confèrent à la pièce son allure classique, idéale pour un salon, un bureau ou un coin lecture. - Dimensions : 108×36×51 cm</p>
-          <div class="item-price">500 €</div>
-        </div>
-      </article>
-
-      <article class="catalogue-item scroll-reveal">
-        <img src="./image_objet/IMG_2027.jpg" alt="Fauteuil Voltaire" class="lightbox-trigger">
-        <div class="item-content">
-          <h3 class="item-title">Paire de lampes « Murano » en opaline bleue</h3>
-          <p class="item-description">Élégante paire de lampes de table en verre opalin soufflé, aux volutes bleu cobalt sur fond laiteux. Leur silhouette « champignon » emblématique des productions muranaises des années 70/80 diffuse une lumière douce et homogène, parfaite pour un chevet, un bureau ou un salon. Les deux pièces présentent un beau travail de marbrure, chacune avec ses variations, témoignant d’un savoir-faire artisanal.</p>
-          <div class="item-price">350 €</div>
-        </div>
-      </article>
-
-      <article class="catalogue-item scroll-reveal">
-        <img src="./image_objet/IMG_2033.jpg" alt="Fauteuil Voltaire" class="lightbox-trigger">
-        <div class="item-content">
-          <h3 class="item-title">Service à liqueur en cristal de Bohême, rouge doublé gravé</h3>
-          <p class="item-description">Raffinée garniture à liqueur en cristal de Bohême rouge « doublé » sur cristal clair, au décor gravé à motifs paysagers et rinceaux. La carafe sphérique à anse claire et son bouchon assorti dialoguent avec huit verres légèrement évasés, chacun animé par des réserves dégagées et des scènes finement travaillées. L’ensemble illustre le savoir-faire bohémien de la fin du XIXᵉ siècle : intensité du rouge rubis, transparences maîtrisées et taille précise.</p>
-          <div class="item-price">450 €</div>
-        </div>
-      </article>
-
-      <article class="catalogue-item scroll-reveal">`
-        <img src="./image_objet/IMG_2074.jpg" alt="Fauteuil Voltaire" class="lightbox-trigger">
-        <div class="item-content">
-          <h3 class="item-title">Commode galbée marquetée – bois de rose, dessus en marbre portugais</h3>
-          <p class="item-description">Estampillée « MARQUANT », Paris — L 76 × H 75 × P 40 cm
-
-Élégante commode à deux tiroirs de style Louis XV/Transition, au bâti galbé et aux côtés mouvementés. Le placage en bois de rose est posé en frises à chevrons et rehaussé d’une marqueterie florale. Les tiroirs sont soulignés de montures en bronze ciselé, tandis que le dessus accueille un marbre portugais veiné, aux bords adoucis. L’estampille « MARQUANT » atteste une production parisienne de fin XIXᵉ – début XXᵉ, caractéristique des belles maisons de meubles spécialisées dans les « meubles de style ».</p>
-          <div class="item-price">1 200 €</div>
-        </div>
-      </article>
-
-      <article class="catalogue-item scroll-reveal">
-        <img src="./image_objet/IMG_1912.jpg" alt="Drapeau vaudou La sirène" class="lightbox-trigger">
-        <div class="item-content">
-          <h3 class="item-title">Plaque murale vintage – style Maya/Aztèque</h3>
-          <p class="item-description">Plaque murale vintage en bois avec décor en malachite, Mexique, 42 × 65 cm. Bas-relief représentant une figure rituelle encadrée d’une frise géométrique, dans le style maya/aztèque. Pièce décorative élégante, idéale pour un intérieur raffiné.</p>
-          <div class="item-price">420 €</div>
-        </div>
-      </article>
+      </div>
     </div>
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="contact-section">
-    <div class="contact-container scroll-reveal">
-      <h2 class="section-title">Contactez-nous</h2>
-      <p class="section-subtitle">Pour toute demande d'information ou acquisition</p>
+  <section id="contact" class="section contact">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 class="section-title">Contactez-Nous</h2>
+        <p class="section-subtitle">Vous avez une question sur une pièce ou souhaitez obtenir un devis ?</p>
+      </div>
 
-      <form class="contact-form" action="mailto:contact@selennia.com" method="POST" enctype="text/plain">
-        <div class="form-group">
-          <label for="name" class="form-label">Nom complet</label>
-          <input type="text" id="name" name="Nom" class="form-input" required>
-        </div>
+      <form id="contact-form" class="contact-form fade-in"
+      action="https://formsubmit.co/selennia.boutique@gmail.com"
+      method="POST" novalidate>
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_subject" value="Nouveau message - Selennia Boutique">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_next" value="#contact">
 
-        <div class="form-group">
-          <label for="email" class="form-label">Adresse email</label>
-          <input type="email" id="email" name="Email" class="form-input" required>
-        </div>
+  <div class="form-grid">
+    <!-- … tes champs inchangés … -->
+    <div class="form-group">
+      <label for="name" class="form-label">Nom complet *</label>
+      <input type="text" id="name" name="name" class="form-input" required>
+    </div>
 
-        <div class="form-group full-width">
-          <label for="message" class="form-label">Votre message</label>
-          <textarea id="message" name="Message" class="form-textarea"
-            placeholder="Décrivez votre demande ou les pièces qui vous intéressent.." required></textarea>
-        </div>
+    <div class="form-group">
+      <label for="email" class="form-label">Email *</label>
+      <input type="email" id="email" name="email" class="form-input" required>
+    </div>
 
-        <button type="submit" class="submit-btn">Envoyer le message</button>
-      </form>
+    <div class="form-group">
+      <label for="phone" class="form-label">Téléphone</label>
+      <input type="tel" id="phone" name="phone" class="form-input">
+    </div>
+
+    <div class="form-group">
+      <label for="subject" class="form-label">Sujet</label>
+      <input type="text" id="subject" name="subject" class="form-input">
+    </div>
+
+    <div class="form-group full-width">
+      <label for="message" class="form-label">Votre message *</label>
+      <textarea id="message" name="message" class="form-textarea" placeholder="Décrivez votre demande ou les pièces qui vous intéressent..." required></textarea>
+    </div>
+
+    <button type="submit" class="submit-btn">
+      <i class="fas fa-paper-plane"></i>
+      Envoyer le message
+    </button>
+  </div>
+</form>
+
+<!-- Statut (utilise tes styles .form-success / .form-error existants) -->
+<p id="form-status" class="form-success" style="display:none;" role="status" aria-live="polite"></p>
+
     </div>
   </section>
 
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <div class="footer-logo">
+          <img src="image_objet/selennia_logo_4.png" alt="Selennia Logo" class="footer-logo-img">
+        </div>
+        <h3>Selennia Boutique</h3>
+        <p>Spécialiste en objets d'art anciens et antiquités. Chaque pièce raconte une histoire unique et apporte une touche d'élégance intemporelle à votre intérieur.</p>
+        
+        <div class="social-links">
+          <a href="https://instagram.com/selennia_boutique" target="_blank" class="social-link">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="tel:+33601581118" class="social-link">
+            <i class="fas fa-phone"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <ul>
+          <li><i class="fas fa-phone"></i> 06 01 58 11 18</li>
+          <li><i class="fas fa-envelope"></i> selennia.boutique@gmail.com</li>
+          <li><i class="fab fa-instagram"></i> @selennia_boutique</li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Nos Spécialités</h3>
+        <ul>
+          <li>Objets d'art anciens</li>
+          <li>Mobilier d'époque</li>
+          <li>Sculptures traditionnelles</li>
+          <li>Art asiatique</li>
+          <li>Restauration d'antiquités</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2024 Selennia Boutique. Tous droits réservés. RCS 330 738675</p>
+    </div>
+  </footer>
+
   <!-- Lightbox -->
   <div class="lightbox" id="lightbox">
-    <button class="lightbox-close">&times;</button>
+    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
     <img class="lightbox-content" id="lightbox-img" alt="">
   </div>
 
   <script src="script.js"></script>
-
-  <footer class="footer">
-  <div class="footer-container">
-    <div class="phone">
-      <span>Nous appeler :</span>
-      <a href="tel:+33623919853" class="phone-link" aria-label="Appeler Selennia Boutique">
-        06&nbsp;23&nbsp;91&nbsp;98&nbsp;53
-      </a>
-    </div>
-
-    <div class="social">
-      <a href="https://instagram.com/selennia" target="_blank" rel="noopener" 
-         class="social-link" aria-label="Instagram Selennia">
-        <i class="fa-brands fa-instagram"></i>
-        <span class="social-text">@selennia</span>
-      </a>
-    </div>
-  </div>
-</footer>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
 </body>
-
 </html>
