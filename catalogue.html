@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="catalog.meta_title">Catalogue - Selennia Boutique</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles-refonte.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="image_objet/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="image_objet/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="image_objet/favicon-16x16.png">
+</head>
+
+<body class="catalogue-page">
+  <!-- Boutons flottants -->
+  <a href="https://wa.me/33601581118" class="whatsapp-float" target="_blank" title="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+  <a href="tel:+33601581118" class="phone-float" title="Appel">
+    <i class="fas fa-phone"></i>
+  </a>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="logo-container">
+        <div class="logo-wrapper">
+          <div class="logo-img">
+            <img src="image_objet/selennia_logo_4 copie 2.png" alt="Selennia Boutique Logo">
+          </div>
+        </div>
+        <div class="brand-text">
+          <div class="brand-name">SELENNIA</div>
+          <div class="brand-subtitle">BOUTIQUE</div>
+        </div>
+      </div>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html" class="nav-link" data-i18n="nav.home">Accueil</a></li>
+        <li><a href="catalogue.html" class="nav-link active" data-i18n="nav.catalogue">Catalogue</a></li>
+        <li><a href="estimation.html" class="nav-link" data-i18n="nav.estimate">Estimation</a></li>
+        <li><a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+
+      <div class="language-switcher" id="language-switcher" style="display:flex; gap:0.5rem; align-items:center;">
+        <img src="https://flagcdn.com/w20/fr.png" alt="Français" id="flag-fr" class="lang-flag active-lang" data-lang="fr" style="cursor:pointer; border:2px solid #d4af37; border-radius:50%; opacity:1;">
+        <img src="https://flagcdn.com/w20/gb.png" alt="English" id="flag-en" class="lang-flag" data-lang="en" style="cursor:pointer; border:2px solid transparent; border-radius:50%; opacity:0.5;">
+      </div>
+
+      <div class="menu-toggle" id="menu-toggle">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- En-tête de page -->
+  <section class="page-header">
+    <div class="container">
+      <div class="page-header-content">
+        <h1 class="page-title" data-i18n="catalog.title">Notre Catalogue</h1>
+        <p class="page-subtitle" data-i18n="catalog.subtitle">Explorez notre collection exclusive d'objets d'art anciens et d'antiquités soigneusement sélectionnés.</p>
+
+        <div class="reassurance-badges">
+          <div class="badge-item"><i class="fas fa-certificate"></i><span data-i18n="catalog.badge.authenticated">100% Authentifiés</span></div>
+          <div class="badge-item"><i class="fas fa-star"></i><span data-i18n="catalog.badge.unique">Pièces Uniques</span></div>
+          <div class="badge-item"><i class="fas fa-shipping-fast"></i><span data-i18n="catalog.badge.delivery">Livraison Sécurisée</span></div>
+        </div>
+
+        <div class="breadcrumb">
+          <a href="index.html" data-i18n="nav.home">Accueil</a> <i class="fas fa-chevron-right"></i> <span data-i18n="catalog.title">Catalogue</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bannière d'urgence -->
+  <section class="urgency-banner">
+    <div class="container">
+      <div class="urgency-content">
+        <i class="fas fa-fire"></i>
+        <span data-i18n="catalog.urgency"><strong>Nouveautés !</strong> 5 pièces exceptionnelles ajoutées cette semaine - Stock limité</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Catalogue -->
+  <section class="catalogue">
+    <div class="container">
+      <div class="search-filters">
+        <div class="filter-row">
+          <div class="filter-group">
+            <label class="filter-label" data-i18n="catalog.filters.search">Recherche par nom</label>
+            <input type="text" id="search-input" class="search-input" placeholder="Tapez votre recherche..." data-i18n-placeholder="catalog.filters.placeholder_search">
+          </div>
+
+          <div class="filter-group">
+            <label class="filter-label" data-i18n="catalog.filters.category">Catégorie</label>
+            <select id="category-filter" class="filter-select">
+              <option value="">Toutes les catégories</option>
+              <option value="peinture">Peinture</option>
+              <option value="sculpture">Sculpture</option>
+              <option value="mobilier">Mobilier</option>
+              <option value="luminaire">Luminaire</option>
+              <option value="art-africain">Art Africain</option>
+              <option value="cristal">Cristal</option>
+              <option value="art-precolombien">Art Précolombien</option>
+              <option value="miroir">Miroir</option>
+              <option value="deco">Décoration</option>
+              <option value="tapisserie">Tapisserie</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label class="filter-label" data-i18n="catalog.filters.price">Prix maximum</label>
+            <select id="price-filter" class="filter-select">
+              <option value="all prices" data-i18n="catalog.filters.price">Tous les prix</option>
+              <option value="500" data-i18n="catalog.filters.price_500">Jusqu'à 500€</option>
+              <option value="1000" data-i18n="catalog.filters.price_1000">Jusqu'à 1000€</option>
+              <option value="1500" data-i18n="catalog.filters.price_1500">Jusqu'à 1500€</option>
+              <option value="2000" data-i18n="catalog.filters.price_2000">Plus de 1500€</option>
+            </select>
+          </div>
+
+          <div class="filter-actions">
+            <button class="search-btn" data-i18n="catalog.actions.search" onclick="applyFilters()"><i class="fas fa-search"></i> Rechercher</button>
+            <button class="reset-btn" data-i18n="catalog.actions.reset" onclick="resetFilters()"><i class="fas fa-undo"></i> Réinitialiser</button>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex; gap:1rem; justify-content:center; margin:2rem 0; flex-wrap:wrap;">
+        <a href="tel:+33601581118"data-i18n="catalog.call" class="btn-primary"> <i class="fas fa-phone"></i> Appelez pour réserver</a>
+        <a href="estimation.html" data-i18n="catalog.estimate"class ="btn-secondary"><i class="fas fa-camera"></i> Faire estimer un objet</a>
+      </div>
+
+      <div class="catalogue-stats" id="catalogue-stats">
+        <span id="results-count">0 résultats</span>
+      </div>
+
+      <div class="catalogue-grid" id="catalogue-grid"></div>
+      <div class="pagination" id="pagination"></div>
+
+      <!-- CTA Estimation -->
+      <div class="estimation-cta-section">
+        <div  class="estimation-cta-content"> 
+          <div class="estimation-icon"><i class="fas fa-search-dollar"></i></div> 
+          <div class="estimation-text"> 
+            <h2>Vous possédez un objet similaire ?</h2> 
+            <p>Faites-le évaluer par nos experts. Service professionnel et confidentiel.</p> 
+            <div class="estimation-price"><span class="price-highlight">Estimation gratuite</span></div>
+          </div>
+          <div class="estimation-actions">
+            <a href="estimation.html" class="btn-primary btn-large"><i class="fas fa-camera"></i> Demander une estimation</a>
+            <p class="estimation-note"><i class="fas fa-clock"></i> Réponse sous 48h</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <div class="footer-logo">
+          <div class="footer-logo-img"><img src="image_objet/selennia_logo_4 copie 2.png" alt="Selennia Boutique Logo"></div>
+          <h3>Selennia Boutique</h3>
+        </div>
+        <p>Spécialiste en objets d'art anciens et antiquités. Chaque pièce raconte une histoire unique.</p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <ul>
+          <li><i class="fas fa-phone"></i> 06 01 58 11 18</li>
+          <li><i class="fas fa-envelope"></i> selennia.boutique@gmail.com</li>
+          <li><i class="fab fa-instagram"></i> @selennia_boutique</li>
+          <li><i class="fas fa-map-marker-alt"></i> Nice, France</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Selennia Boutique. Tous droits réservés. RCS 330 738675</p>
+    </div>
+  </footer>
+
+  <!-- Lightbox pour agrandir les images -->
+  <div id="image-lightbox" class="lightbox">
+    <span class="close-lightbox">&times;</span>
+    <img class="lightbox-content" id="lightbox-img" alt="">
+  </div>
+
+  <script src="lang.js"></script>
+  <script src="script-catalogue.js"></script>
+  <script src="script-refonte.js"></script>
+  <!-- AJOUT : gestion indépendante de la lightbox -->
+  <script src="lightbox-catalogue.js"></script>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="estimate.meta_title">Estimation - Selennia Boutique</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles-refonte.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="image_objet/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="image_objet/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="image_objet/favicon-16x16.png">
+</head>
+
+<body class="estimation-page">
+  <!-- Boutons flottants -->
+  <a href="https://wa.me/33601581118" class="whatsapp-float" target="_blank" title="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+  <a href="tel:+33601581118" class="phone-float" title="Appel">
+    <i class="fas fa-phone"></i>
+  </a>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="logo-container">
+        <div class="logo-wrapper">
+          <div class="logo-img">
+            <img src="image_objet/selennia_logo_4 copie 2.png" alt="Selennia Boutique Logo">
+          </div>
+        </div>
+        <div class="brand-text">
+          <div class="brand-name">SELENNIA</div>
+          <div class="brand-subtitle">BOUTIQUE</div>
+        </div>
+      </div>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html" class="nav-link" data-i18n="nav.home">Accueil</a></li>
+        <li><a href="catalogue.html" class="nav-link" data-i18n="nav.catalogue">Catalogue</a></li>
+        <li><a href="estimation.html" class="nav-link active" data-i18n="nav.estimate">Estimation</a></li>
+        <li><a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+
+      <!-- Sélecteur de langue -->
+      <div class="language-switcher" id="language-switcher" style="display:flex; gap:0.5rem; align-items:center;">
+        <img src="https://flagcdn.com/w20/fr.png" alt="Français" id="flag-fr" class="lang-flag active-lang" data-lang="fr" style="cursor:pointer; border:2px solid #d4af37; border-radius:50%; opacity:1;">
+        <img src="https://flagcdn.com/w20/gb.png" alt="English" id="flag-en" class="lang-flag" data-lang="en" style="cursor:pointer; border:2px solid transparent; border-radius:50%; opacity:0.5;">
+      </div>
+
+      <div class="menu-toggle" id="menu-toggle">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <div class="page-header-content">
+        <h1 class="page-title" data-i18n="estimate.title">Faire estimer votre objet</h1>
+        <p class="page-subtitle" data-i18n="estimate.subtitle">Remplissez le formulaire ci-dessous et recevez une estimation gratuite sous 48h.</p>
+        <div class="breadcrumb">
+          <a href="index.html" data-i18n="nav.home">Accueil</a> <i class="fas fa-chevron-right"></i> <span data-i18n="estimate.title">Estimation</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Estimation Section -->
+  <section class="estimation-section">
+    <div class="container">
+      <div class="form-container">
+        <div class="form-intro">
+          <h2 data-i18n="estimate.form.title">Demande d'Estimation</h2>
+          <p data-i18n="estimate.form.description">Notre équipe d'experts analysera vos informations et photos pour vous fournir une estimation gratuite et détaillée.</p>
+          <div class="pricing-info">
+            <div class="price" data-i18n="estimate.form.price_note">Estimation gratuite</div>
+          </div>
+        </div>
+
+        <form id="estimation-form">
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label" data-i18n="estimate.form.name">Nom complet</label>
+              <input type="text" class="form-input" id="name" name="name" placeholder="Votre nom complet">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" data-i18n="estimate.form.email">Adresse email</label>
+              <input type="email" class="form-input" id="email" name="email" placeholder="exemple@email.com">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" data-i18n="estimate.form.phone">Téléphone</label>
+              <input type="tel" class="form-input" id="phone" name="phone" placeholder="+33...">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" data-i18n="estimate.form.city">Ville</label>
+              <input type="text" class="form-input" id="city" name="city" placeholder="Votre ville">
+            </div>
+
+            <div class="form-group full-width">
+              <label class="form-label" data-i18n="estimate.form.object_name">Nom de l'objet</label>
+              <input type="text" class="form-input" id="object-name" name="object-name" placeholder="Exemple : Vase en porcelaine, Sculpture, Tableau...">
+            </div>
+
+            <div class="form-group full-width">
+              <label class="form-label" data-i18n="estimate.form.description">Description de l'objet</label>
+              <textarea class="form-textarea" id="description" name="description" placeholder="Ajoutez les dimensions, la matière, la signature, etc."></textarea>
+            </div>
+
+            <div class="form-group full-width">
+              <label class="form-label" data-i18n="estimate.form.photos">Photos de l'objet</label>
+              <div class="photo-upload-zone" id="photo-upload-zone">
+                <i class="fas fa-upload upload-icon"></i>
+                <p class="upload-text" data-i18n="estimate.form.upload_text">Cliquez ou déposez vos photos ici</p>
+                <p class="upload-info" data-i18n="estimate.form.upload_info">Formats acceptés : JPG, PNG (max 10 Mo)</p>
+                <input type="file" id="photos" class="file-input" name="photos" multiple accept="image/*">
+              </div>
+              <div class="photos-preview" id="photos-preview"></div>
+            </div>
+          </div>
+
+          <button type="submit" class="submit-btn">
+            <i class="fas fa-paper-plane"></i> <span data-i18n="estimate.form.submit">Envoyer la demande</span>
+          </button>
+
+          <div id="form-message" class="form-message" style="display:none;"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <div class="footer-logo">
+          <div class="footer-logo-img"><img src="image_objet/selennia_logo_4 copie 2.png" alt="Selennia Boutique Logo"></div>
+          <h3>Selennia Boutique</h3>
+        </div>
+        <p data-i18n="footer.about">Spécialiste en objets d'art anciens et antiquités. Chaque pièce raconte une histoire unique et apporte une touche d'élégance intemporelle à votre intérieur.</p>
+      </div>
+
+      <div class="footer-section">
+        <h3 data-i18n="footer.contact.title">Contact</h3>
+        <ul>
+          <li><i class="fas fa-phone"></i> 06 01 58 11 18</li>
+          <li><i class="fas fa-envelope"></i> selennia.boutique@gmail.com</li>
+          <li><i class="fab fa-instagram"></i> @selennia_boutique</li>
+          <li><i class="fas fa-map-marker-alt"></i> Nice, France</li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3 data-i18n="footer.specialties.title">Nos Spécialités</h3>
+        <ul>
+          <li data-i18n="footer.specialties.art">Objets d'art anciens</li>
+          <li data-i18n="footer.specialties.furniture">Mobilier d'époque</li>
+          <li data-i18n="footer.specialties.sculpture">Sculptures traditionnelles</li>
+          <li data-i18n="footer.specialties.asian">Art asiatique</li>
+          <li data-i18n="footer.specialties.estimate">Estimation d'objets</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2024 Selennia Boutique. <span data-i18n="footer.rights">Tous droits réservés.</span> RCS 330 738675</p>
+    </div>
+  </footer>
+
+  <script src="lang.js"></script>
+  <script src="script-estimation.js"></script>
+  <script src="script-refonte.js"></script>
+</body>
+</html>

@@ -1,26 +1,55 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Selennia Boutique - Objets d'Art Anciens</title>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
-    rel="stylesheet">
+  <title data-i18n="home.meta_title">Selennia Boutique - Objets d'Art Anciens</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles-refonte.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="image_objet/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="image_objet/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="image_objet/favicon-16x16.png">
 </head>
 
 <body>
+  <!-- Bannière flottante d'estimation -->
+  <div class="floating-estimation-banner" id="floating-banner">
+    <div class="banner-content">
+      <div class="banner-icon">
+        <i class="fas fa-camera"></i>
+      </div>
+      <div class="banner-text">
+        <strong data-i18n="home.banner.title">Estimation Gratuite</strong>
+        <span data-i18n="home.banner.subtitle">Faites évaluer vos objets d'art gratuitement</span>
+      </div>
+      <a href="estimation.html" class="banner-cta" data-i18n="home.banner.cta">
+        Estimer maintenant <i class="fas fa-arrow-right"></i>
+      </a>
+      <button class="banner-close" onclick="closeBanner()">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Boutons flottants -->
+  <a href="https://wa.me/33601581118" class="whatsapp-float" target="_blank" title="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+  <a href="tel:+33601581118" class="phone-float" title="Appel">
+    <i class="fas fa-phone"></i>
+  </a>
+
   <!-- Navigation -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
       <div class="logo-container">
         <div class="logo-wrapper">
           <div class="logo-img">
-            <i class="fas fa-gem" style="color: white; font-size: 1.5rem;"></i>
+            <img src="image_objet/selennia_logo_4 copie 2.png" alt="Selennia Boutique Logo">
           </div>
         </div>
         <div class="brand-text">
@@ -30,318 +59,117 @@
       </div>
 
       <ul class="nav-menu" id="nav-menu">
-        <li><a href="#accueil" class="nav-link">Accueil</a></li>
-        <li><a href="#catalogue" class="nav-link">Catalogue</a></li>
-        <li><a href="#estimation" class="nav-link">Estimation</a></li>
-        <li><a href="#apropos" class="nav-link">À Propos</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="index.html" class="nav-link active" data-i18n="nav.home">Accueil</a></li>
+        <li><a href="catalogue.html" class="nav-link" data-i18n="nav.catalogue">Catalogue</a></li>
+        <li><a href="estimation.html" class="nav-link" data-i18n="nav.estimate">Estimation</a></li>
+        <li><a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a></li>
       </ul>
 
+      <!-- Sélecteur de langue -->
+      <div class="language-switcher" id="language-switcher" style="display:flex; gap:0.5rem; align-items:center;">
+        <img src="https://flagcdn.com/w20/fr.png" alt="Français" id="flag-fr" class="lang-flag active-lang" data-lang="fr" style="cursor:pointer; border:2px solid #d4af37; border-radius:50%; opacity:1;">
+        <img src="https://flagcdn.com/w20/gb.png" alt="English" id="flag-en" class="lang-flag" data-lang="en" style="cursor:pointer; border:2px solid transparent; border-radius:50%; opacity:0.5;">
+      </div>
+
       <div class="menu-toggle" id="menu-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span></span><span></span><span></span>
       </div>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <section id="accueil" class="hero">
+  <section class="hero">
     <div class="hero-content">
       <div class="hero-logo">
         <div class="hero-logo-img">
-          <i class="fas fa-gem" style="color: white; font-size: 3rem;"></i>
+          <img src="image_objet/selennia_logo_4 copie.png" alt="Selennia Boutique Logo">
         </div>
       </div>
 
-      <h1 class="hero-title">Objets d'Art Anciens<br>& de Collection</h1>
-      <p class="hero-subtitle">Découvrez des pièces uniques, authentiques et intemporelles, sélectionnées avec passion
-        pour leur histoire exceptionnelle et leur beauté remarquable.</p>
+      <h1 class="hero-title" data-i18n="home.hero.title">Objets d'Art Anciens & de Collection</h1>
+      <p class="hero-subtitle" data-i18n="home.hero.subtitle">Découvrez des pièces uniques, authentiques et intemporelles sélectionnées avec passion par nos experts en art ancien.</p>
 
-      <div class="cta-group">
-        <button class="btn-primary" onclick="scrollToSection('catalogue')">
-          Explorer le Catalogue
-          <i class="fas fa-search"></i>
-        </button>
-        <button class="btn-secondary" onclick="scrollToSection('estimation')">
-          Estimation Gratuite
-          <i class="fas fa-camera"></i>
-        </button>
+      <div class="trust-indicators">
+        <div class="trust-item"><div class="trust-number">500+</div><div class="trust-label" data-i18n="home.trust.items_sold">Objets vendus</div></div>
+        <div class="trust-item"><div class="trust-number">20+</div><div class="trust-label" data-i18n="home.trust.experience">Ans d'expérience</div></div>
+        <div class="trust-item"><div class="trust-number">100%</div><div class="trust-label" data-i18n="home.trust.authenticated">Authentifiés</div></div>
+      </div>
+
+      <div class="cta-group-enhanced">
+        <a href="catalogue.html" class="btn-primary btn-pulse" data-i18n="home.hero.cta_discover">
+          <i class="fas fa-gem"></i> Découvrir nos Trésors
+        </a>
+        <a href="estimation.html" class="btn-secondary" data-i18n="home.hero.cta_estimate">
+          <i class="fas fa-camera"></i> Faire Estimer
+        </a>
+      </div>
+
+      <div class="reassurance-badges">
+        <div class="badge-item"><i class="fas fa-certificate"></i><span data-i18n="home.badge.authenticity">Authenticité garantie</span></div>
+        <div class="badge-item"><i class="fas fa-shipping-fast"></i><span data-i18n="home.badge.delivery">Livraison sécurisée</span></div>
+        <div class="badge-item"><i class="fas fa-shield-alt"></i><span data-i18n="home.badge.payment">Paiement sécurisé</span></div>
       </div>
     </div>
   </section>
 
-  <!-- Catalogue -->
-  <section id="catalogue" class="catalogue">
-    <div class="section-header fade-in">
-      <h2 class="section-title">Notre Catalogue</h2>
-      <p class="section-subtitle">Recherchez et explorez notre collection d'objets d'art et d'antiquités</p>
-    </div>
-
-    <!-- Filtres de recherche -->
-    <div class="search-filters">
-      <div class="filter-row">
-        <div class="filter-group">
-          <label class="filter-label">Recherche par nom</label>
-          <input type="text" id="search-input" class="search-input" placeholder="Tapez votre recherche...">
-        </div>
-
-        <div class="filter-group">
-          <label class="filter-label">Catégorie</label>
-          <select id="category-filter" class="filter-select">
-            <option value="">Toutes les catégories</option>
-            <option value="art-vaudou">Art Vaudou</option>
-            <option value="peinture">Peinture</option>
-            <option value="sculpture">Sculpture</option>
-            <option value="mobilier">Mobilier</option>
-            <option value="luminaire">Luminaire</option>
-            <option value="art-africain">Art Africain</option>
-            <option value="cristal">Cristal</option>
-          </select>
-        </div>
-
-        <div class="filter-group">
-          <label class="filter-label">Prix maximum</label>
-          <select id="price-filter" class="filter-select">
-            <option value="">Tous les prix</option>
-            <option value="500">Jusqu'à 500€</option>
-            <option value="1000">Jusqu'à 1000€</option>
-            <option value="1500">Jusqu'à 1500€</option>
-            <option value="2000">Plus de 1500€</option>
-          </select>
-        </div>
-
-        <div class="filter-group">
-          <label class="filter-label">Trier par</label>
-          <select id="sort-filter" class="filter-select">
-            <option value="">Pertinence</option>
-            <option value="price-asc">Prix croissant</option>
-            <option value="price-desc">Prix décroissant</option>
-            <option value="name">Nom A-Z</option>
-          </select>
-        </div>
-
-        <div style="display: flex; gap: 0.5rem;">
-          <button class="search-btn" onclick="applyFilters()">
-            <i class="fas fa-search"></i>
-            Rechercher
-          </button>
-          <button class="reset-btn" onclick="resetFilters()">
-            <i class="fas fa-undo"></i>
-            Reset
-          </button>
-        </div>
+  <!-- Bannière d'urgence -->
+  <section class="urgency-banner">
+    <div class="container">
+      <div class="urgency-content">
+        <i class="fas fa-fire"></i>
+        <span data-i18n="home.urgency.text"><strong>Nouvelles acquisitions !</strong> 5 pièces exceptionnelles ajoutées cette semaine</span>
+        <a href="catalogue.html" class="urgency-link" data-i18n="home.urgency.cta">Voir maintenant <i class="fas fa-arrow-right"></i></a>
       </div>
-    </div>
-
-    <!-- Grille du catalogue -->
-    <div class="catalogue-grid" id="catalogue-grid">
-      <!-- Les items seront ajoutés dynamiquement -->
-    </div>
-
-    <!-- Pagination -->
-    <div class="pagination" id="pagination">
-      <!-- Les boutons de pagination seront ajoutés dynamiquement -->
     </div>
   </section>
 
-  <!-- Section Estimation -->
-  <section id="estimation" class="estimation">
-    <div class="estimation-content">
-      <div class="section-header">
-        <h2 class="section-title">Estimation Gratuite</h2>
-        <p class="section-subtitle">Envoyez-nous des photos de vos objets pour une estimation professionnelle gratuite
-        </p>
-      </div>
-
-      <div class="estimation-intro">
-        <p>Nos experts évaluent gratuitement vos objets d'art, antiquités et pièces de collection. Envoyez-nous
-          simplement quelques photos de qualité et une description détaillée.</p>
-      </div>
-
-      <form class="estimation-form" id="estimation-form" action="https://selennia.fr/api/estimation" method="POST"
-        enctype="multipart/form-data">
-        <div class="form-grid">
-          <div class="form-group">
-            <label for="est-name" class="form-label">Nom complet *</label>
-            <input type="text" id="est-name" name="name" class="form-input" required>
-          </div>
-
-          <div class="form-group">
-            <label for="est-email" class="form-label">Email *</label>
-            <input type="email" id="est-email" name="email" class="form-input" required>
-          </div>
-
-          <div class="form-group">
-            <label for="est-phone" class="form-label">Téléphone</label>
-            <input type="tel" id="est-phone" name="phone" class="form-input">
-          </div>
-
-          <div class="form-group">
-            <label for="object-type" class="form-label">Type d'objet *</label>
-            <select id="object-type" name="object-type" class="form-select" required>
-              <option value="">Sélectionnez une catégorie</option>
-              <option value="peinture">Peinture / Tableau</option>
-              <option value="sculpture">Sculpture</option>
-              <option value="mobilier">Mobilier ancien</option>
-              <option value="ceramique">Céramique / Porcelaine</option>
-              <option value="bijoux">Bijoux / Montres</option>
-              <option value="art-asiatique">Art asiatique</option>
-              <option value="art-africain">Art africain</option>
-              <option value="autre">Autre</option>
-            </select>
-          </div>
-
-          <div class="form-group full-width">
-            <label for="est-description" class="form-label">Description de l'objet *</label>
-            <textarea id="est-description" name="description" class="form-textarea" required></textarea>
-          </div>
-
-          <div class="form-group full-width">
-            <label class="form-label">Photos de l'objet * (jusqu'à 6 photos)</label>
-            <div class="photo-upload-zone" id="photo-upload-zone">
-              <input type="file" id="photo-input" name="photos" class="file-input" accept="image/*" multiple required>
-              <div class="upload-icon"><i class="fas fa-cloud-upload-alt"></i></div>
-              <div class="upload-text">
-                <strong>Cliquez pour sélectionner</strong> ou glissez-déposez vos photos ici
-              </div>
-              <div style="font-size: 0.9rem; color: var(--text-light);">
-                Formats acceptés: JPG, PNG (max 5MB par photo)
-              </div>
-            </div>
-            <div class="photos-preview" id="photos-preview"></div>
-          </div>
-        </div>
-
-        <button type="submit" class="submit-btn">
-          <i class="fas fa-paper-plane"></i>
-          Envoyer pour estimation
-        </button>
-      </form>
-
-
-      <div id="estimation-status" style="display:none;" class="form-success"></div>
-    </div>
-  </section>
-
-  <!-- À Propos -->
-  <section id="apropos" class="section">
+  <!-- Expertise Section -->
+  <section class="expertise-section">
     <div class="container">
       <div class="section-header fade-in">
-        <h2 class="section-title">Notre Expertise</h2>
-        <p class="section-subtitle">Plus de 20 ans d'expérience dans l'art ancien et les antiquités</p>
+        <h2 class="section-title" data-i18n="home.expertise.title">Notre Expertise</h2>
+        <p class="section-subtitle" data-i18n="home.expertise.subtitle">Plus de 20 ans d'expérience dans l'art ancien et les antiquités</p>
       </div>
 
-      <div
-        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; align-items: center;">
-        <div class="fade-in">
-          <h3
-            style="font-family: 'Playfair Display', serif; font-size: 1.8rem; color: var(--dark-green); margin-bottom: 1.5rem;">
-            Selennia Boutique
-          </h3>
-          <p style="color: var(--text-light); line-height: 1.8; margin-bottom: 1.5rem;">
-            Spécialistes en objets d'art anciens et antiquités, nous sélectionnons chaque pièce pour son authenticité,
-            sa beauté et l'histoire qu'elle porte.
-          </p>
-          <p style="color: var(--text-light); line-height: 1.8; margin-bottom: 1.5rem;">
-            Notre expertise couvre l'art asiatique, africain, le mobilier d'époque, les sculptures traditionnelles et
-            les objets décoratifs rares du monde entier.
-          </p>
-          <p style="color: var(--text-light); line-height: 1.8;">
-            Basés à Nice, nous recevons sur rendez-vous et proposons une expédition sécurisée partout en France et à
-            l'international.
-          </p>
+      <div class="expertise-grid">
+        <div class="expertise-card fade-in">
+          <div class="card-icon"><i class="fas fa-gem"></i></div>
+          <h3 data-i18n="home.expertise.authenticity.title">Authenticité Garantie</h3>
+          <p data-i18n="home.expertise.authenticity.text">Chaque pièce est expertisée et authentifiée selon les standards les plus rigoureux.</p>
         </div>
 
-        <div class="fade-in" style="text-align: center; background: var(--cream); padding: 3rem; border-radius: 20px;">
-          <div
-            style="width: 150px; height: 150px; background: var(--primary-gold); border-radius: 50%; margin: 0 auto 2rem; display: flex; align-items: center; justify-content: center;">
-            <i class="fas fa-gem" style="color: white; font-size: 4rem;"></i>
-          </div>
-          <h4 style="font-family: 'Playfair Display', serif; color: var(--dark-green); margin-bottom: 1rem;">
-            Expertise & Authenticité
-          </h4>
-          <p style="color: var(--text-light);">
-            Chaque pièce est expertisée et authentifiée par nos soins
-          </p>
+        <div class="expertise-card fade-in">
+          <div class="card-icon"><i class="fas fa-globe-africa"></i></div>
+          <h3 data-i18n="home.expertise.world.title">Art du Monde</h3>
+          <p data-i18n="home.expertise.world.text">Collection variée d'objets d'art asiatique, africain, européen et des Amériques.</p>
+        </div>
+
+        <div class="expertise-card fade-in">
+          <div class="card-icon"><i class="fas fa-history"></i></div>
+          <h3 data-i18n="home.expertise.history.title">Pièces d'Histoire</h3>
+          <p data-i18n="home.expertise.history.text">Mobilier d'époque, sculptures traditionnelles et objets décoratifs chargés d'histoire.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="section" style="background: var(--white);">
+  <!-- CTA Estimation -->
+  <section class="estimation-cta-section">
     <div class="container">
-      <div class="section-header fade-in">
-        <h2 class="section-title">Contactez-Nous</h2>
-        <p class="section-subtitle">Une question sur une pièce ou besoin d'informations ?</p>
-      </div>
-
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem;">
-        <div class="fade-in">
-          <h3 style="font-size: 1.5rem; color: var(--dark-green); margin-bottom: 2rem;">Informations de contact</h3>
-          <div style="display: flex; flex-direction: column; gap: 1.5rem;">
-            <div style="display: flex; align-items: center; gap: 1rem;">
-              <i class="fas fa-phone" style="color: var(--primary-gold); font-size: 1.2rem;"></i>
-              <div>
-                <strong>Téléphone</strong><br>
-                <a href="tel:+33601581118" style="color: var(--text-light); text-decoration: none;">06 01 58 11 18</a>
-              </div>
-            </div>
-            <div style="display: flex; align-items: center; gap: 1rem;">
-              <i class="fas fa-envelope" style="color: var(--primary-gold); font-size: 1.2rem;"></i>
-              <div>
-                <strong>Email</strong><br>
-                <a href="mailto:selennia.boutique@gmail.com"
-                  style="color: var(--text-light); text-decoration: none;">selennia.boutique@gmail.com</a>
-              </div>
-            </div>
-            <div style="display: flex; align-items: center; gap: 1rem;">
-              <i class="fab fa-instagram" style="color: var(--primary-gold); font-size: 1.2rem;"></i>
-              <div>
-                <strong>Instagram</strong><br>
-                <a href="https://instagram.com/selennia_boutique" target="_blank"
-                  style="color: var(--text-light); text-decoration: none;">@selennia_boutique</a>
-              </div>
-            </div>
-            <div style="display: flex; align-items: center; gap: 1rem;">
-              <i class="fas fa-map-marker-alt" style="color: var(--primary-gold); font-size: 1.2rem;"></i>
-              <div>
-                <strong>Localisation</strong><br>
-                <span style="color: var(--text-light);">Nice, France<br>Visite sur rendez-vous</span>
-              </div>
-            </div>
-          </div>
+      <div class="estimation-cta-content">
+        <div class="estimation-icon"><i class="fas fa-search-dollar"></i></div>
+        <div class="estimation-text">
+          <h2 data-i18n="home.estimate_cta.title">Vous possédez un objet d'art ancien ?</h2>
+          <p data-i18n="home.estimate_cta.text">Faites-le évaluer par nos experts. Service professionnel et confidentiel.</p>
+          <div class="estimation-price" data-i18n="home.estimate_cta.price"><span class="price-highlight">Estimation gratuite</span></div>
         </div>
-
-        <div class="fade-in">
-          <form id="contact-form" action="https://selennia.fr/api/contact" method="POST"
-            style="background: var(--cream); padding: 2rem; border-radius: 20px;">
-            <div class="form-grid">
-              <div class="form-group">
-                <label for="contact-name" class="form-label">Nom *</label>
-                <input type="text" id="contact-name" name="name" class="form-input" required>
-              </div>
-              <div class="form-group">
-                <label for="contact-email" class="form-label">Email *</label>
-                <input type="email" id="contact-email" name="email" class="form-input" required>
-              </div>
-              <div class="form-group full-width">
-                <label for="contact-subject" class="form-label">Sujet</label>
-                <input type="text" id="contact-subject" name="subject" class="form-input">
-              </div>
-              <div class="form-group full-width">
-                <label for="contact-message" class="form-label">Message *</label>
-                <textarea id="contact-message" name="message" class="form-textarea" required></textarea>
-              </div>
-            </div>
-            <button type="submit" class="submit-btn">
-              <i class="fas fa-paper-plane"></i>
-              Envoyer le message
-            </button>
-          </form>
-
-          <div id="contact-status" style="display:none;"></div>
+        <div class="estimation-actions">
+          <a href="estimation.html" class="btn-primary btn-large" data-i18n="home.estimate_cta.button">
+            <i class="fas fa-camera"></i> Demander une estimation
+          </a>
+          <p class="estimation-note" data-i18n="home.estimate_cta.note">
+            <i class="fas fa-clock"></i> Réponse sous 48h
+          </p>
         </div>
       </div>
     </div>
@@ -351,88 +179,41 @@
   <footer class="footer">
     <div class="footer-content">
       <div class="footer-section">
-        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-          <div class="footer-logo-img">
-            <i class="fas fa-gem" style="color: white; font-size: 1.5rem;"></i>
-          </div>
+        <div class="footer-logo">
+          <div class="footer-logo-img"><img src="image_objet/selennia_logo_4 copie 2.png" alt="Selennia Boutique Logo"></div>
           <h3>Selennia Boutique</h3>
         </div>
-        <p>Spécialiste en objets d'art anciens et antiquités. Chaque pièce raconte une histoire unique et apporte une
-          touche d'élégance intemporelle à votre intérieur.</p>
-
-        <div class="social-links">
-          <a href="https://instagram.com/selennia_boutique" target="_blank" class="social-link">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="tel:+33601581118" class="social-link">
-            <i class="fas fa-phone"></i>
-          </a>
-        </div>
+        <p data-i18n="footer.about">Spécialiste en objets d'art anciens et antiquités. Chaque pièce raconte une histoire unique et apporte une touche d'élégance intemporelle à votre intérieur.</p>
       </div>
 
       <div class="footer-section">
-        <h3>Contact</h3>
+        <h3 data-i18n="footer.contact.title">Contact</h3>
         <ul>
           <li><i class="fas fa-phone"></i> 06 01 58 11 18</li>
           <li><i class="fas fa-envelope"></i> selennia.boutique@gmail.com</li>
           <li><i class="fab fa-instagram"></i> @selennia_boutique</li>
+          <li><i class="fas fa-map-marker-alt"></i> Nice, France</li>
         </ul>
       </div>
 
       <div class="footer-section">
-        <h3>Nos Spécialités</h3>
+        <h3 data-i18n="footer.specialties.title">Nos Spécialités</h3>
         <ul>
-          <li>Objets d'art anciens</li>
-          <li>Mobilier d'époque</li>
-          <li>Sculptures traditionnelles</li>
-          <li>Art asiatique</li>
-          <li>Estimation d'objets</li>
+          <li data-i18n="footer.specialties.art">Objets d'art anciens</li>
+          <li data-i18n="footer.specialties.furniture">Mobilier d'époque</li>
+          <li data-i18n="footer.specialties.sculpture">Sculptures traditionnelles</li>
+          <li data-i18n="footer.specialties.asian">Art asiatique</li>
+          <li data-i18n="footer.specialties.estimate">Estimation d'objets</li>
         </ul>
       </div>
     </div>
 
     <div class="footer-bottom">
-      <p>&copy; 2024 Selennia Boutique. Tous droits réservés. RCS 330 738675</p>
+      <p>&copy; 2024 Selennia Boutique. <span data-i18n="footer.rights">Tous droits réservés.</span> RCS 330 738675</p>
     </div>
   </footer>
 
-  <!-- Modal détails -->
-  <div id="item-modal" class="modal" style="display: none;">
-    <div class="modal-content">
-      <span class="modal-close" onclick="closeItemModal()">&times;</span>
-      <div id="modal-body">
-        <!-- Contenu dynamique -->
-      </div>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
-  <script>
-    // Fonction pour afficher/masquer les champs d'estimation
-    function toggleEstimationFields(type) {
-      const estimationFields = document.getElementById('estimation-fields');
-      if (type === 'estimation') {
-        estimationFields.style.display = 'block';
-        // Changer le sujet automatiquement pour l'email
-        document.querySelector('input[name="_subject"]').value = 'Demande d\'estimation - Selennia Boutique';
-      } else {
-        estimationFields.style.display = 'none';
-        document.querySelector('input[name="_subject"]').value = 'Nouveau message - Selennia Boutique';
-      }
-    }
-
-    // Fonction pour scroll vers contact avec pré-sélection estimation
-    function scrollToEstimation() {
-      scrollToSection('contact');
-      setTimeout(() => {
-        const select = document.querySelector('select[name="type_demande"]');
-        if (select) {
-          select.value = 'estimation';
-          toggleEstimationFields('estimation');
-        }
-      }, 500);
-    }
-  </script>
+  <script src="lang.js"></script>
+  <script src="script-refonte.js"></script>
 </body>
-
 </html>

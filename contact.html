@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="contact.meta_title">Contact - Selennia Boutique</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles-refonte.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="image_objet/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="image_objet/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="image_objet/favicon-16x16.png">
+</head>
+
+<body class="contact-page">
+  <!-- Boutons flottants -->
+  <a href="https://wa.me/33601581118" class="whatsapp-float" target="_blank" title="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+  <a href="tel:+33601581118" class="phone-float" title="Appel">
+    <i class="fas fa-phone"></i>
+  </a>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="logo-container">
+        <div class="logo-wrapper">
+          <div class="logo-img">
+            <img src="image_objet/selennia_logo_4 copie 2.png" alt="Selennia Boutique Logo">
+          </div>
+        </div>
+        <div class="brand-text">
+          <div class="brand-name">SELENNIA</div>
+          <div class="brand-subtitle">BOUTIQUE</div>
+        </div>
+      </div>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html" class="nav-link" data-i18n="nav.home">Accueil</a></li>
+        <li><a href="catalogue.html" class="nav-link" data-i18n="nav.catalogue">Catalogue</a></li>
+        <li><a href="estimation.html" class="nav-link" data-i18n="nav.estimate">Estimation</a></li>
+        <li><a href="contact.html" class="nav-link active" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+
+      <!-- Sélecteur de langue -->
+      <div class="language-switcher" id="language-switcher" style="display:flex; gap:0.5rem; align-items:center;">
+        <img src="https://flagcdn.com/w20/fr.png" alt="Français" id="flag-fr" class="lang-flag active-lang" data-lang="fr" style="cursor:pointer; border:2px solid #d4af37; border-radius:50%; opacity:1;">
+        <img src="https://flagcdn.com/w20/gb.png" alt="English" id="flag-en" class="lang-flag" data-lang="en" style="cursor:pointer; border:2px solid transparent; border-radius:50%; opacity:0.5;">
+      </div>
+
+      <div class="menu-toggle" id="menu-toggle">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <div class="page-header-content">
+        <h1 class="page-title" data-i18n="contact.title">Contactez-nous</h1>
+        <p class="page-subtitle" data-i18n="contact.subtitle">Vous souhaitez obtenir plus d’informations ? Notre équipe est à votre écoute.</p>
+        <div class="breadcrumb">
+          <a href="index.html" data-i18n="nav.home">Accueil</a> <i class="fas fa-chevron-right"></i> <span data-i18n="contact.title">Contact</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <div class="container contact-layout">
+      <!-- Informations de contact -->
+      <div class="contact-info-section">
+        <div class="contact-info">
+          <h3 data-i18n="contact.info.title">Nos coordonnées</h3>
+          <p data-i18n="contact.info.text">Nous sommes disponibles pour répondre à toutes vos questions concernant nos objets d’art, estimations ou ventes.</p>
+
+          <div class="contact-items">
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-phone"></i></div>
+              <div class="contact-details">
+                <h4 data-i18n="contact.info.phone">Téléphone</h4>
+                <a href="tel:+33601581118">06 01 58 11 18</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+              <div class="contact-details">
+                <h4 data-i18n="contact.info.email">Email</h4>
+                <a href="mailto:selennia.boutique@gmail.com">selennia.boutique@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fab fa-instagram"></i></div>
+              <div class="contact-details">
+                <h4 data-i18n="contact.info.instagram">Instagram</h4>
+                <a href="https://instagram.com/selennia_boutique" target="_blank">@selennia_boutique</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div class="contact-details">
+                <h4 data-i18n="contact.info.location">Localisation</h4>
+                <p>Nice, France</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="business-hours">
+            <h4><i class="fas fa-clock"></i> <span data-i18n="contact.info.hours">Horaires d’ouverture</span></h4>
+            <div class="hours-grid">
+              <div class="hours-item"><span data-i18n="days.monday">Lundi</span> <span>10h - 18h</span></div>
+              <div class="hours-item"><span data-i18n="days.tuesday">Mardi</span> <span>10h - 18h</span></div>
+              <div class="hours-item"><span data-i18n="days.wednesday">Mercredi</span> <span>10h - 18h</span></div>
+              <div class="hours-item"><span data-i18n="days.thursday">Jeudi</span> <span>10h - 18h</span></div>
+              <div class="hours-item"><span data-i18n="days.friday">Vendredi</span> <span>10h - 18h</span></div>
+              <div class="hours-item"><span data-i18n="days.saturday">Samedi</span> <span>Sur rendez-vous</span></div>
+              <div class="hours-item"><span data-i18n="days.sunday">Dimanche</span> <span>Fermé</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Formulaire de contact -->
+      <div class="form-container">
+        <div class="form-intro">
+          <h2 data-i18n="contact.form.title">Envoyez-nous un message</h2>
+          <p data-i18n="contact.form.subtitle">Remplissez le formulaire ci-dessous et nous vous répondrons dans les plus brefs délais.</p>
+        </div>
+
+        <form id="contact-form">
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label" data-i18n="contact.form.name">Nom complet</label>
+              <input type="text" class="form-input" id="name" name="name" placeholder="Votre nom complet">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" data-i18n="contact.form.email">Adresse email</label>
+              <input type="email" class="form-input" id="email" name="email" placeholder="exemple@email.com">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" data-i18n="contact.form.subject">Sujet</label>
+              <input type="text" class="form-input" id="subject" name="subject" placeholder="Sujet de votre message">
+            </div>
+
+            <div class="form-group full-width">
+              <label class="form-label" data-i18n="contact.form.message">Message</label>
+              <textarea class="form-textarea" id="message" name="message" placeholder="Votre message..."></textarea>
+            </div>
+          </div>
+
+          <button type="submit" class="submit-btn">
+            <i class="fas fa-paper-plane"></i> <span data-i18n="contact.form.send">Envoyer le message</span>
+          </button>
+
+          <div id="form-message" class="form-message" style="display:none;"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <div class="footer-logo">
+          <div class="footer-logo-img"><img src="image_objet/selennia_logo_4 copie 2.png" alt="Selennia Boutique Logo"></div>
+          <h3>Selennia Boutique</h3>
+        </div>
+        <p data-i18n="footer.about">Spécialiste en objets d'art anciens et antiquités. Chaque pièce raconte une histoire unique et apporte une touche d'élégance intemporelle à votre intérieur.</p>
+      </div>
+
+      <div class="footer-section">
+        <h3 data-i18n="footer.contact.title">Contact</h3>
+        <ul>
+          <li><i class="fas fa-phone"></i> 06 01 58 11 18</li>
+          <li><i class="fas fa-envelope"></i> selennia.boutique@gmail.com</li>
+          <li><i class="fab fa-instagram"></i> @selennia_boutique</li>
+          <li><i class="fas fa-map-marker-alt"></i> Nice, France</li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3 data-i18n="footer.specialties.title">Nos Spécialités</h3>
+        <ul>
+          <li data-i18n="footer.specialties.art">Objets d'art anciens</li>
+          <li data-i18n="footer.specialties.furniture">Mobilier d'époque</li>
+          <li data-i18n="footer.specialties.sculpture">Sculptures traditionnelles</li>
+          <li data-i18n="footer.specialties.asian">Art asiatique</li>
+          <li data-i18n="footer.specialties.estimate">Estimation d'objets</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2024 Selennia Boutique. <span data-i18n="footer.rights">Tous droits réservés.</span> RCS 330 738675</p>
+    </div>
+  </footer>
+
+  <script src="lang.js"></script>
+  <script src="script-contact.js"></script>
+  <script src="script-refonte.js"></script>
+</body>
+</html>
