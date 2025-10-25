@@ -112,16 +112,21 @@
     </div>
   </section>
 
-  <!-- Bannière d'urgence -->
-  <section class="urgency-banner">
-    <div class="container">
-      <div class="urgency-content">
-        <i class="fas fa-fire"></i>
-        <span data-i18n="home.urgency.text"><strong>Nouvelles acquisitions !</strong> 5 pièces exceptionnelles ajoutées cette semaine</span>
-        <a href="catalogue.html" class="urgency-link" data-i18n="home.urgency.cta">Voir maintenant <i class="fas fa-arrow-right"></i></a>
-      </div>
+<section class="urgency-banner" id="urgency-banner">
+  <div class="container">
+    <div class="urgency-content">
+      <i class="fas fa-fire"></i>
+      <span id="new-items-count">
+        <strong id="banner-title">Chargement...</strong>
+        <span id="banner-count-text"></span>
+      </span>
+      <a href="catalogue.html" class="urgency-link" data-i18n="home.urgency.cta">
+        Voir maintenant <i class="fas fa-arrow-right"></i>
+      </a>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- Expertise Section -->
   <section class="expertise-section">
@@ -215,5 +220,29 @@
 
   <script src="lang.js"></script>
   <script src="script-refonte.js"></script>
+  <script src="script-catalogue.js"></script>
+  <script src="carousel-selennia.js"></script>
+  <script src="banner-newitems.js"></script>
+  <script src="banner-dynamic.js"></script>
+
+
+
+  <!-- Script pour mise à jour dynamique du compteur d'objets -->
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      try {
+        const response = await fetch('script-catalogue.js');
+        const text = await response.text();
+        const match = text.match(/const collectionData\\s*=\\s*(\\[[\\s\\S]*?\\]);/);
+        if (!match) return;
+        const collectionData = eval(match[1]);
+        const count = collectionData.length;
+        const newCountEl = document.getElementById('new-count');
+        if (newCountEl) newCountEl.textContent = count;
+      } catch (err) {
+        console.error('Erreur chargement catalogue:', err);
+      }
+    });
+  </script>
 </body>
 </html>

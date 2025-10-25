@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Selennia Boutique</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="image_objet/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="image_objet/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="image_objet/favicon-16x16.png">
+  <link rel="shortcut icon" href="favicons/favicon.ico">
+</head>
+
+<body class="contact-page">
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="logo-container">
+        <div class="logo-wrapper">
+          <div class="logo-img">
+            <img src="image_objet/selennia_logo_4 copie 2.png" alt="Selennia Boutique Logo">
+          </div>
+        </div>
+        <div class="brand-text">
+          <div class="brand-name">SELENNIA</div>
+          <div class="brand-subtitle">BOUTIQUE</div>
+        </div>
+      </div>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html" class="nav-link">Accueil</a></li>
+        <li><a href="catalogue.html" class="nav-link">Catalogue</a></li>
+        <li><a href="estimation.html" class="nav-link">Estimation</a></li>
+        <li><a href="contact.html" class="nav-link active">Contact</a></li>
+      </ul>
+
+      <div class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <div class="page-header-content">
+        <h1 class="page-title">Contactez-Nous</h1>
+        <p class="page-subtitle">Une question sur une pièce ? Besoin d'informations ? Notre équipe d'experts est à votre écoute</p>
+        <div class="breadcrumb">
+          <a href="index.html">Accueil</a> <i class="fas fa-chevron-right"></i> <span>Contact</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-layout">
+        <!-- Informations de contact -->
+        <div class="contact-info-section">
+          <div class="contact-info">
+            <h3>Nos Coordonnées</h3>
+            <p>N'hésitez pas à nous contacter pour toute question concernant nos objets d'art, une demande de renseignements ou pour prendre rendez-vous dans notre showroom à Nice.</p>
+            
+            <div class="contact-items">
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fas fa-phone"></i>
+                </div>
+                <div class="contact-details">
+                  <h4>Téléphone</h4>
+                  <a href="tel:+33601581118">06 01 58 11 18</a>
+                  <p>Du lundi au vendredi, 9h-18h</p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="contact-details">
+                  <h4>Email</h4>
+                  <a href="mailto:selennia.boutique@gmail.com">selennia.boutique@gmail.com</a>
+                  <p>Réponse sous 24h</p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="contact-details">
+                  <h4>Localisation</h4>
+                  <p>Nice, Provence-Alpes-Côte d'Azur<br>France</p>
+                  <p><strong>Visite sur rendez-vous uniquement</strong></p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fab fa-instagram"></i>
+                </div>
+                <div class="contact-details">
+                  <h4>Instagram</h4>
+                  <a href="https://instagram.com/selennia_boutique" target="_blank">@selennia_boutique</a>
+                  <p>Suivez nos dernières acquisitions</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="business-hours">
+              <h4><i class="fas fa-clock"></i> Horaires de Contact</h4>
+              <div class="hours-grid">
+                <div class="hours-item">
+                  <span>Lundi - Vendredi</span>
+                  <span>9h00 - 18h00</span>
+                </div>
+                <div class="hours-item">
+                  <span>Samedi</span>
+                  <span>10h00 - 16h00</span>
+                </div>
+                <div class="hours-item">
+                  <span>Dimanche</span>
+                  <span>Fermé</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Formulaire de contact -->
+        <div class="contact-form-section">
+          <div class="form-container">
+            <div class="form-intro">
+              <h2>Envoyez-nous un Message</h2>
+              <p>Remplissez le formulaire ci-dessous et nous vous répondrons dans les plus brefs délais.</p>
+            </div>
+
+            <form class="contact-form" id="contact-form" action="https://selennia.fr/api/contact" method="POST">
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="contact-name" class="form-label">Nom complet *</label>
+                  <input type="text" id="contact-name" name="name" class="form-input" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-email" class="form-label">Email *</label>
+                  <input type="email" id="contact-email" name="email" class="form-input" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-phone" class="form-label">Téléphone</label>
+                  <input type="tel" id="contact-phone" name="phone" class="form-input">
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-type" class="form-label">Type de demande</label>
+                  <select id="contact-type" name="contact-type" class="form-select">
+                    <option value="">Sélectionnez un type</option>
+                    <option value="information">Information sur une pièce</option>
+                    <option value="rendez-vous">Prise de rendez-vous</option>
+                    <option value="achat">Demande d'achat</option>
+                    <option value="estimation">Estimation d'objet</option>
+                    <option value="autre">Autre</option>
+                  </select>
+                </div>
+
+                <div class="form-group full-width">
+                  <label for="contact-subject" class="form-label">Sujet</label>
+                  <input type="text" id="contact-subject" name="subject" class="form-input" placeholder="Objet de votre demande">
+                </div>
+
+                <div class="form-group full-width">
+                  <label for="contact-message" class="form-label">Message *</label>
+                  <textarea id="contact-message" name="message" class="form-textarea" rows="6" placeholder="Décrivez votre demande en détail..." required></textarea>
+                </div>
+              </div>
+
+              <button type="submit" class="submit-btn">
+                <i class="fas fa-paper-plane"></i>
+                Envoyer le message
+              </button>
+            </form>
+
+            <div id="contact-status" style="display:none;"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section Services -->
+      <div class="services-section">
+        <div class="section-header">
+          <h2 class="section-title">Nos Services</h2>
+          <p class="section-subtitle">Un accompagnement complet pour les collectionneurs et amateurs d'art</p>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card fade-in">
+            <div class="service-icon">
+              <i class="fas fa-search"></i>
+            </div>
+            <h3>Expertise & Authentification</h3>
+            <p>Nos experts évaluent et authentifient vos objets d'art selon les standards les plus rigoureux de la profession.</p>
+            <a href="estimation.html" class="service-link">Demander une estimation</a>
+          </div>
+
+          <div class="service-card fade-in">
+            <div class="service-icon">
+              <i class="fas fa-handshake"></i>
+            </div>
+            <h3>Conseil Personnalisé</h3>
+            <p>Bénéficiez de nos conseils d'experts pour vos acquisitions, que vous soyez collectionneur débutant ou confirmé.</p>
+            <a href="tel:+33601581118" class="service-link">Nous appeler</a>
+          </div>
+
+          <div class="service-card fade-in">
+            <div class="service-icon">
+              <i class="fas fa-shipping-fast"></i>
+            </div>
+            <h3>Livraison Sécurisée</h3>
+            <p>Expédition professionnelle et assurée partout en France et à l'international, avec emballage sur-mesure.</p>
+            <a href="catalogue.html" class="service-link">Voir le catalogue</a>
+          </div>
+
+          <div class="service-card fade-in">
+            <div class="service-icon">
+              <i class="fas fa-eye"></i>
+            </div>
+            <h3>Visite Privée</h3>
+            <p>Découvrez nos pièces dans notre showroom à Nice lors d'un rendez-vous privé et personnalisé.</p>
+            <a href="#contact-form" class="service-link">Prendre rendez-vous</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section Informations Pratiques -->
+      <div class="practical-info">
+        <div class="info-grid">
+          <div class="info-section">
+            <h3><i class="fas fa-credit-card"></i> Moyens de Paiement</h3>
+            <ul>
+              <li>Virement bancaire</li>
+              <li>Chèque</li>
+              <li>Espèces (sur place)</li>
+              <li>Paiement sécurisé en ligne</li>
+            </ul>
+          </div>
+
+          <div class="info-section">
+            <h3><i class="fas fa-shield-alt"></i> Garanties</h3>
+            <ul>
+              <li>Certificat d'authenticité</li>
+              <li>Garantie de conformité</li>
+              <li>Droit de rétractation 14 jours</li>
+              <li>Assurance transport incluse</li>
+            </ul>
+          </div>
+
+          <div class="info-section">
+            <h3><i class="fas fa-truck"></i> Livraison</h3>
+            <ul>
+              <li>France métropolitaine : 48h-72h</li>
+              <li>Europe : 3-7 jours ouvrés</li>
+              <li>International : sur devis</li>
+              <li>Retrait sur place possible</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <div class="footer-logo">
+          <div class="footer-logo-img">
+            <img src="image_objet/selennia_logo_4 copie 2.png" alt="Selennia Boutique Logo">
+          </div>
+          <h3>Selennia Boutique</h3>
+        </div>
+        <p>Spécialiste en objets d'art anciens et antiquités. Chaque pièce raconte une histoire unique et apporte une touche d'élégance intemporelle à votre intérieur.</p>
+        
+        <div class="social-links">
+          <a href="https://instagram.com/selennia_boutique" target="_blank" class="social-link">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="tel:+33601581118" class="social-link">
+            <i class="fas fa-phone"></i>
+          </a>
+        </div>
+      </div>
+
+     
+
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <ul>
+          <li><i class="fas fa-phone"></i> 06 01 58 11 18</li>
+          <li><i class="fas fa-envelope"></i> selennia.boutique@gmail.com</li>
+          <li><i class="fab fa-instagram"></i> @selennia_boutique</li>
+          <li><i class="fas fa-map-marker-alt"></i> Nice, France</li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Nos Spécialités</h3>
+        <ul>
+          <li>Objets d'art anciens</li>
+          <li>Mobilier d'époque</li>
+          <li>Sculptures traditionnelles</li>
+          <li>Art asiatique</li>
+          <li>Estimation d'objets</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2024 Selennia Boutique. Tous droits réservés. RCS 330 738675</p>
+    </div>
+  </footer>
+
+  <script src="script-contact.js"></script>
+</body>
+</html>

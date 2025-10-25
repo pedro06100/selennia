@@ -293,6 +293,89 @@ const collectionData = [
   category: "peinture",
   image: "image_objet/vue_sur_minaret.png",
   featured: true
+},
+{
+  id: 28,
+  title: "Encrier Tharaud Limoges Art Déco",
+  description: "Encrier en porcelaine émaillée blanche signé Tharaud Limoges, datant des années 1930. Élégant design Art Déco rehaussé de motifs géométriques dorés et noirs. Un bel exemple du savoir-faire limougeaud alliant raffinement et fonctionnalité.",
+  price: "320 €",
+  numericPrice: 320,
+  details: "Époque : Années 1930<br>Fabricant : Tharaud Limoges<br>Matière : Porcelaine émaillée<br>Style : Art Déco<br>Dimensions : 14 × 10 × 6 cm<br>Signature : Tharaud Limoges, sous la base<br>État : Excellent état, très légère patine du temps<br>Provenance : France, Limoges",
+  category: "bureautique",
+  image: "image_objet/encrier_limoges_tharaud.PNG",
+  featured: true
+},
+{
+  id: 29,
+  title: "Encrier en laiton avec boîtier à timbres",
+  description: "Encrier en laiton doré à riche décor ciselé de putti et volutes, intégrant un compartiment pour timbres. Pièce élégante et rare, typique des bureaux d’apparat de la fin du XIXᵉ siècle.",
+  price: "480 €",
+  numericPrice: 480,
+  details: "Époque : Fin XIXᵉ siècle<br>Matière : Laiton doré massif<br>Particularité : Compartiment à timbres intégré<br>Décor : Putti et rinceaux<br>Dimensions : L. 30 × H. 17 × P. 15 cm<br>État : Très bon état, légère patine homogène<br>Provenance : France",
+  category: "bureautique",
+  image: "image_objet/encrier_laiton.PNG",
+  featured: false,
+  dateAdded:"2025-10-25"
+},
+{
+  id: 30,
+  title: "Série de 6 pots à épices en faïence – début XXᵉ siècle",
+  description: "Charmant ensemble de six pots à épices en faïence émaillée, décorés de motifs floraux rouges sur fond jaune. Typiques des cuisines françaises du début du XXᵉ siècle, ces pots conservent leur cachet d’origine.",
+  price: "160 €",
+  numericPrice: 160,
+  details: "Époque : Début XXᵉ siècle<br>Matière : Faïence émaillée<br>Décor : Fleurs rouges sur fond jaune<br>Nombre de pièces : 6<br>Inscriptions : Farine, Sucre, Café, Thé, Poivre, Épices<br>Hauteur : de 10 à 22 cm<br>État : Très bon état général, quelques micro-fissures d’usage<br>Provenance : France",
+  category: "céramique",
+  image: "image_objet/pot_epices.PNG",
+  featured: false,
+  dateAdded:"2025-10-25"
+},
+{
+  id: 31,
+  title: "Assiettes Limoges à liseret doré et monogramme – début XXᵉ siècle",
+  description: "Élégant service d’assiettes en porcelaine fine de Limoges, à liseret doré et monogramme stylisé. Ces pièces raffinées, vendues par 6 ou 12, témoignent de la qualité des productions limougeaudes du début du XXᵉ siècle.",
+  price: "240 € (lot de 6)",
+  numericPrice: 240,
+  details: "Époque : Début XXᵉ siècle<br>Fabricant : Limoges France<br>Matière : Porcelaine fine<br>Décor : Filet doré et monogramme central<br>Vente : Par lot de 6 ou 12<br>Diamètre : 24 cm<br>État : Excellent, dorure intacte<br>Signature : Limoges France au dos<br>Provenance : France",
+  category: "arts_de_la_table",
+  image: "image_objet/assiettes_limoges.PNG",
+  featured: false,
+  dateAdded:"2025-10-25"
+},
+{
+  id: 32,
+  title: "Paire de bougeoirs Gien en faïence décorés de putti",
+  description: "Paire de bougeoirs en faïence émaillée de la manufacture de Gien, richement décorés de putti et de motifs floraux peints à la main. Une belle pièce d’ornement typique du savoir-faire français.",
+  price: "450 €",
+  numericPrice: 450,
+  details: "Fabricant : Manufacture de Gien<br>Époque : XXᵉ siècle<br>Matière : Faïence émaillée polychrome<br>Décor : Putti dorés, feuillages verts et bordures bleues<br>Dimensions : H. 23 × L. 16 cm<br>État : Parfait état, aucune restauration<br>Provenance : France",
+  category: "décoration",
+  image: "image_objet/bougeoire_gien_faience.PNG",
+  featured: true,
+  dateAdded:"2025-10-25"
+},
+{
+  id: 33,
+  title: "Coupe en cristal taillé, zinc doré et porcelaine décorée de roses",
+  description: "Élégante coupe en cristal taillé montée sur un piédestal en zinc doré et porcelaine décorée de roses multicolores. Mariage harmonieux entre matériaux précieux et romantisme floral.",
+  price: "390 €",
+  numericPrice: 390,
+  details: "Époque : XXᵉ siècle<br>Matière : Cristal taillé, zinc doré, porcelaine<br>Décor : Roses en porcelaine polychrome<br>Hauteur : 22 cm<br>Diamètre du bol : 20 cm<br>Poids : 2,5 kg<br>État : Excellent état, aucun éclat<br>Provenance : Europe",
+  category: "cristallerie",
+  image: "image_objet/coupe_cristal.PNG",
+  featured: true,
+  dateAdded:"2025-10-25"
+},
+{
+  id: 34,
+  title: "Paire de vases Art Déco – Manufacture Scailmont",
+  description: "Superbe paire de vases en verre ambré moulé, issus de la manufacture belge Scailmont. Le décor floral stylisé et les lignes géométriques incarnent parfaitement le style Art Déco des années 1930.",
+  price: "350 €",
+  numericPrice: 350,
+  details: "Fabricant : Manufacture Scailmont<br>Époque : Années 1930<br>Matière : Verre moulé ambré<br>Style : Art Déco<br>Décor : Tulipes stylisées en relief<br>Dimensions : H. 24 × Ø 16 cm<br>État : Excellent état, aucune ébréchure<br>Provenance : Belgique",
+  category: "verrerie",
+  image: "image_objet/vase_scailmont.PNG",
+  featured: false,
+  dateAdded:"2025-10-25"
 }
 ];
 

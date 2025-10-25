@@ -2321,48 +2321,6 @@ body {
     padding: 0;
   }
 }
-.lightbox {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.9);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease;
-  z-index: 9999;
-}
-
-.lightbox.show {
-  opacity: 1;
-  visibility: visible;
-}
-
-.lightbox-content {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 10px;
-  box-shadow: 0 0 30px rgba(0,0,0,0.5);
-  object-fit: contain;
-}
-
-.close-lightbox {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  color: white;
-  font-size: 2rem;
-  cursor: pointer;
-  transition: 0.3s;
-  font-weight: bold;
-  z-index: 10000;
-}
-
-.close-lightbox:hover {
-  color: var(--primary-color);
-}
-
 
 
 /* =============================================================================

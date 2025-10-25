@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catalogue - Selennia Boutique</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="image_objet/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="image_objet/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="image_objet/favicon-16x16.png">
+  <link rel="shortcut icon" href="favicons/favicon.ico">
+</head>
+
+<body class="catalogue-page">
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="logo-container">
+        <div class="logo-wrapper">
+          <div class="logo-img">
+            <img src="image_objet/selennia_logo_4 copie 2.png" alt="Selennia Boutique Logo">
+          </div>
+        </div>
+        <div class="brand-text">
+          <div class="brand-name">SELENNIA</div>
+          <div class="brand-subtitle">BOUTIQUE</div>
+        </div>
+      </div>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html" class="nav-link">Accueil</a></li>
+        <li><a href="catalogue.html" class="nav-link active">Catalogue</a></li>
+        <li><a href="estimation.html" class="nav-link">Estimation</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <div class="page-header-content">
+        <h1 class="page-title">Notre Catalogue</h1>
+        <p class="page-subtitle">Explorez notre collection exclusive d'objets d'art anciens et d'antiquités soigneusement sélectionnés</p>
+        <div class="breadcrumb">
+          <a href="index.html">Accueil</a> <i class="fas fa-chevron-right"></i> <span>Catalogue</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Catalogue Section -->
+  <section class="catalogue">
+    <div class="container">
+      <!-- Filtres de recherche -->
+      <div class="search-filters">
+        <div class="filter-row">
+          <div class="filter-group">
+            <label class="filter-label">Recherche par nom</label>
+            <input type="text" id="search-input" class="search-input" placeholder="Tapez votre recherche...">
+          </div>
+
+          <div class="filter-group">
+            <label class="filter-label">Catégorie</label>
+            <select id="category-filter" class="filter-select">
+              <option value="">Toutes les catégories</option>
+              <option value="art-vaudou">Art Vaudou</option>
+              <option value="peinture">Peinture</option>
+              <option value="sculpture">Sculpture</option>
+              <option value="mobilier">Mobilier</option>
+              <option value="luminaire">Luminaire</option>
+              <option value="art-africain">Art Africain</option>
+              <option value="cristal">Cristal</option>
+              <option value="art-precolombien">Art Précolombien</option>
+              <option value="miroir">Miroir</option>
+              <option value="deco">Décoration</option>
+              <option value="tapisserie">Tapisserie</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label class="filter-label">Prix maximum</label>
+            <select id="price-filter" class="filter-select">
+              <option value="">Tous les prix</option>
+              <option value="500">Jusqu'à 500€</option>
+              <option value="1000">Jusqu'à 1000€</option>
+              <option value="1500">Jusqu'à 1500€</option>
+              <option value="2000">Plus de 1500€</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label class="filter-label">Trier par</label>
+            <select id="sort-filter" class="filter-select">
+              <option value="">Pertinence</option>
+              <option value="price-asc">Prix croissant</option>
+              <option value="price-desc">Prix décroissant</option>
+              <option value="name">Nom A-Z</option>
+            </select>
+          </div>
+
+          <div class="filter-actions">
+            <button class="search-btn" onclick="applyFilters()">
+              <i class="fas fa-search"></i>
+              Rechercher
+            </button>
+            <button class="reset-btn" onclick="resetFilters()">
+              <i class="fas fa-undo"></i>
+              Reset
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Résultats -->
+      <div class="catalogue-stats" id="catalogue-stats">
+        <span id="results-count">0 résultats</span>
+      </div>
+
+      <!-- Grille du catalogue -->
+      <div class="catalogue-grid" id="catalogue-grid">
+        <!-- Les items seront ajoutés dynamiquement -->
+      </div>
+
+      <!-- Pagination -->
+      <div class="pagination" id="pagination">
+        <!-- Les boutons de pagination seront ajoutés dynamiquement -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <div class="footer-logo">
+          <div class="footer-logo-img">
+            <img src="image_objet/selennia_logo_4 copie 2.png" alt="Selennia Boutique Logo">
+          </div>
+          <h3>Selennia Boutique</h3>
+        </div>
+        <p>Spécialiste en objets d'art anciens et antiquités. Chaque pièce raconte une histoire unique et apporte une touche d'élégance intemporelle à votre intérieur.</p>
+        
+        <div class="social-links">
+          <a href="https://instagram.com/selennia_boutique" target="_blank" class="social-link">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="tel:+33601581118" class="social-link">
+            <i class="fas fa-phone"></i>
+          </a>
+        </div>
+      </div>
+
+      
+
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <ul>
+          <li><i class="fas fa-phone"></i> 06 01 58 11 18</li>
+          <li><i class="fas fa-envelope"></i> selennia.boutique@gmail.com</li>
+          <li><i class="fab fa-instagram"></i> @selennia_boutique</li>
+          <li><i class="fas fa-map-marker-alt"></i> Nice, France</li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Nos Spécialités</h3>
+        <ul>
+          <li>Objets d'art anciens</li>
+          <li>Mobilier d'époque</li>
+          <li>Sculptures traditionnelles</li>
+          <li>Art asiatique</li>
+          <li>Estimation d'objets</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2024 Selennia Boutique. Tous droits réservés. RCS 330 738675</p>
+    </div>
+  </footer>
+
+  <!-- Modal détails -->
+  <div id="item-modal" class="modal" style="display: none;">
+    <div class="modal-content">
+      <span class="modal-close" onclick="closeItemModal()">&times;</span>
+      <div id="modal-body">
+        <!-- Contenu dynamique -->
+      </div>
+    </div>
+  </div>
+
+  <script src="script-catalogue.js"></script>
+</body>
+</html>
